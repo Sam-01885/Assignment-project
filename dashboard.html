@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Customer Dashboard - SANURA FLAVOURS</title>
+    <link rel="stylesheet" href="dashboard.css">
+</head>
+<body>
+    <!-- Navigation Header -->
+    <header class="header">
+        <div class="header-container">
+            <div class="logo">
+                <span class="logo-emoji">🍔</span>
+                <div class="logo-text">
+                    <h1>SANURA FLAVOURS</h1>
+                    <p>Food Ordering System</p>
+                </div>
+            </div>
+            <nav class="navbar">
+                <button class="nav-toggle" id="navToggle">☰</button>
+                <ul class="nav-menu" id="navMenu">
+                    <li><a href="#" class="nav-link active">Dashboard</a></li>
+                    <li><a href="#" class="nav-link">Order History</a></li>
+                    <li><a href="#" class="nav-link">Menu</a></li>
+                    <li><a href="#" class="nav-link">Settings</a></li>
+                </ul>
+            </nav>
+            <button class="logout-btn" id="logoutBtn">Logout</button>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="main-container">
+        <!-- Welcome Section -->
+        <section class="welcome-section">
+            <div class="welcome-card">
+                <div class="welcome-icon">👋</div>
+                <h2>Welcome to SANURA FLAVOURS</h2>
+                <p>Hi, <span id="userName" class="user-name">Customer</span>!</p>
+                <p class="welcome-subtitle">Your account is ready. Start ordering delicious food now!</p>
+            </div>
+        </section>
+
+        <!-- Quick Actions -->
+        <section class="quick-actions">
+            <h3>Quick Actions</h3>
+            <div class="actions-grid">
+                <div class="action-card">
+                    <div class="action-icon">🛒</div>
+                    <h4>Browse Menu</h4>
+                    <p>Explore our delicious menu options</p>
+                    <button class="action-btn">Browse Now</button>
+                </div>
+                <div class="action-card">
+                    <div class="action-icon">📦</div>
+                    <h4>Recent Orders</h4>
+                    <p>View your order history</p>
+                    <button class="action-btn">View Orders</button>
+                </div>
+                <div class="action-card">
+                    <div class="action-icon">❤️</div>
+                    <h4>Favorites</h4>
+                    <p>Your favorite items</p>
+                    <button class="action-btn">See Favorites</button>
+                </div>
+                <div class="action-card">
+                    <div class="action-icon">🎯</div>
+                    <h4>Offers</h4>
+                    <p>Special deals and promotions</p>
+                    <button class="action-btn">View Offers</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- User Profile Card -->
+        <section class="profile-section">
+            <h3>Your Profile Information</h3>
+            <div class="profile-card">
+                <div class="profile-row">
+                    <div class="profile-item">
+                        <label>Full Name</label>
+                        <p id="profileFullName">-</p>
+                    </div>
+                    <div class="profile-item">
+                        <label>Email</label>
+                        <p id="profileEmail">-</p>
+                    </div>
+                </div>
+                <div class="profile-row">
+                    <div class="profile-item">
+                        <label>Phone</label>
+                        <p id="profilePhone">-</p>
+                    </div>
+                    <div class="profile-item">
+                        <label>City</label>
+                        <p id="profileCity">-</p>
+                    </div>
+                </div>
+                <div class="profile-row">
+                    <div class="profile-item full">
+                        <label>Address</label>
+                        <p id="profileAddress">-</p>
+                    </div>
+                </div>
+                <div class="profile-row">
+                    <div class="profile-item half">
+                        <label>Postal Code</label>
+                        <p id="profilePostalCode">-</p>
+                    </div>
+                    <div class="profile-item half">
+                        <label>Registered</label>
+                        <p id="profileRegistered">-</p>
+                    </div>
+                </div>
+                <button class="edit-profile-btn" id="editProfileBtn">Edit Profile</button>
+            </div>
+        </section>
+
+        <!-- Statistics Section -->
+        <section class="stats-section">
+            <h3>Your Activity</h3>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-icon">🍕</div>
+                    <div class="stat-content">
+                        <p class="stat-number">0</p>
+                        <p class="stat-label">Total Orders</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">💰</div>
+                    <div class="stat-content">
+                        <p class="stat-number">$0.00</p>
+                        <p class="stat-label">Total Spent</p>
+                    </div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-icon">⭐</div>
+                    <div class="stat-content">
+                        <p class="stat-number">0</p>
+                        <p class="stat-label">Loyalty Points</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="about-section">
+            <h3>About SANURA FLAVOURS</h3>
+            <div class="about-card">
+                <h4>Welcome to the Best Food Ordering Experience</h4>
+                <p>SANURA FLAVOURS is dedicated to bringing you the finest quality food with exceptional service. Our platform makes ordering delicious meals simple, quick, and enjoyable.</p>
+                <ul class="features-list">
+                    <li>✓ Wide variety of cuisines</li>
+                    <li>✓ Fast and reliable delivery</li>
+                    <li>✓ Fresh ingredients guaranteed</li>
+                    <li>✓ 24/7 customer support</li>
+                    <li>✓ Secure payments</li>
+                    <li>✓ Loyalty rewards program</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <p>&copy; 2026 SANURA FLAVOURS. All rights reserved.</p>
+            <p>Contact: support@sanura-flavours.com | Phone: 1-800-SANURA</p>
+        </div>
+    </footer>
+
+    <!-- Global Message -->
+    <div id="globalMessage" class="global-message hidden"></div>
+
+    <script src="dashboard.js"></script>
+</body>
+</html>

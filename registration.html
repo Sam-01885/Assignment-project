@@ -3,21 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Customer Registration - Food Ordering System</title>
+    <title>Customer Registration - SANURA FLAVOURS</title>
     <link rel="stylesheet" href="registration.css">
 </head>
 <body>
     <div class="container">
         <!-- Logo Section -->
         <div class="logo-section">
-            <img src="logo.jpg" alt="Food Ordering System Logo" class="logo">
+            <div class="logo-brand">
+                <div class="logo-circle">🍔</div>
+                <div class="logo-text">
+                    <h2>SANURA FLAVOURS</h2>
+                    <p>Food Ordering System</p>
+                </div>
+            </div>
         </div>
+
+        <!-- Global Messages -->
+        <div id="globalMessage" class="global-message hidden"></div>
 
         <!-- Registration Form -->
         <div class="registration-container">
             <div class="form-wrapper">
                 <h1>Create Your Account</h1>
-                <p class="subtitle">Join us to start ordering delicious food</p>
+                <p class="subtitle">Join SANURA FLAVOURS to start ordering delicious food</p>
 
                 <form id="registrationForm" novalidate>
                     <!-- Full Name -->
@@ -109,6 +118,10 @@
                             placeholder="Enter a strong password"
                             required
                         >
+                        <div class="password-strength">
+                            <div class="strength-bar"></div>
+                            <span class="strength-text"></span>
+                        </div>
                         <span class="password-hint">Minimum 8 characters, include uppercase, lowercase, and numbers</span>
                         <span class="error-message" id="passwordError"></span>
                     </div>
@@ -126,8 +139,26 @@
                         <span class="error-message" id="confirmPasswordError"></span>
                     </div>
 
+                    <!-- Terms & Conditions -->
+                    <div class="form-group checkbox">
+                        <input 
+                            type="checkbox" 
+                            id="terms" 
+                            name="terms" 
+                            required
+                        >
+                        <label for="terms" class="checkbox-label">I agree to the Terms & Conditions and Privacy Policy</label>
+                        <span class="error-message" id="termsError"></span>
+                    </div>
+
+                    <!-- Loading Spinner -->
+                    <div class="loading-spinner hidden">
+                        <div class="spinner"></div>
+                        <p>Creating your account...</p>
+                    </div>
+
                     <!-- Submit Button -->
-                    <button type="submit" class="submit-btn">Create Account</button>
+                    <button type="submit" class="submit-btn" id="submitBtn">Create Account</button>
 
                     <!-- Login Link -->
                     <p class="login-link">
@@ -136,13 +167,16 @@
                 </form>
 
                 <!-- Success Message -->
-                <div class="success-message" id="successMessage" style="display: none;">
+                <div class="success-message hidden" id="successMessage">
+                    <div class="success-icon">✓</div>
                     <h2>Registration Successful!</h2>
-                    <p>Your account has been created successfully. Welcome to our food ordering system!</p>
-                    <button type="button" class="submit-btn" id="resetBtn">Register Another Account</button>
+                    <p>Welcome to SANURA FLAVOURS, <span id="welcomeName"></span>!</p>
+                    <p>Your account has been created successfully.</p>
+                    <button type="button" class="submit-btn" id="proceedBtn">Go to Dashboard</button>
                 </div>
             </div>
         </div>
     </div>
+    <script src="registration.js"></script>
 </body>
 </html>
